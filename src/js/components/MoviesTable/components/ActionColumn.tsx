@@ -24,7 +24,7 @@ export default function ActionColumn({
 			key={index}
 			className="action-column"
 		>
-			<a
+			<div
 				onClick={() => handleMovieRemove(column)}
 				title="Přesunout"
 				{...provided.dragHandleProps}
@@ -34,8 +34,8 @@ export default function ActionColumn({
 					className="drag-handle"
 					alt="Přesunout"
 				/>
-			</a>
-			<a
+			</div>
+			<div
 				onClick={() => handleMovieRemove(column)}
 				title="Odstranit"
 			>
@@ -44,7 +44,7 @@ export default function ActionColumn({
 					className="remove-movie"
 					alt="Odstranit"
 				/>
-			</a>
+			</div>
 		</td>
 	)
 }
