@@ -1,0 +1,152 @@
+#root
+  display: flex
+  flex-flow: column
+  align-items: center
+
+.page-header
+  padding: 20px
+  text-align: center
+  font-weight: 500
+
+table
+  color: #383632
+  border-collapse: collapse
+  font-weight: 500
+  margin-top: 20px
+
+  thead
+    background: #79C000FF
+    color: white
+    border-bottom: 1px solid #383632
+
+    th
+      border-right: 1px solid white
+      padding: 10px
+
+
+      &:last-child
+        border-right: #383632
+
+    .resize-handle
+      width: 4px
+      background: #e5f6df
+      cursor: ew-resize
+
+  tbody
+    background: white
+
+    .is-dragged
+      background: #eae7e7
+      display: flex
+      box-shadow: 0px 1px 6px 0px
+
+
+    tr
+      border-bottom: 1px solid #383632
+
+    td
+      border-right: 1px solid #383632
+      padding: 10px
+      max-width: 300px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+      &:last-child
+        border-right: none
+
+    .action-column
+      display: flex
+      align-items: baseline
+
+      .drag-handle
+        cursor: grabbing
+
+      .remove-movie
+        cursor: pointer
+
+      .drag-handle,
+      .remove-movie
+        width: 18px
+        height: 18px
+        padding: 0 10px
+
+.movies-actions
+  display: flex
+
+.dropdown-items
+  height: 400px
+  overflow-x: hidden
+  position: absolute
+  background: white
+  font-weight: 500
+  padding: 0 10px
+  border: 1px solid #383632
+  box-shadow: 0px 2px 3px 0px
+  margin-top: 10px
+  width: 400px
+
+  .movies-selector-header
+    display: flex
+    position: sticky
+    top: 0
+    background: white
+    padding: 10px 0
+    justify-content: space-around
+    width: 100%
+
+  .available-movie
+    display: flex
+    justify-content: space-between
+    padding: 5px 0
+
+  .movies-filter
+    input
+      height: 32px
+      border-radius: 4px
+      border: 1px solid #79c000
+
+      &:focus-visible
+        outline: none
+        border: 2px solid #79c000
+
+.styled-input
+    input
+      width: 20px
+      height: 20px
+      cursor: pointer
+
+.positive-button
+  background: #e5f6df
+  border: 1px solid #79c000
+  color: #79c000
+  border-radius: 4px
+  height: 36px
+
+  &:hover
+    background: #79c000
+    color: white
+
+.negative-button
+  background:	#ffdddd
+  border: 1px solid #ff7474
+  color: #ff7474
+  border-radius: 4px
+  height: 36px
+
+  &:hover
+    background: #ff7474
+    color: white
+
+.negative-button,
+.positive-button
+  cursor: pointer
+
+  .span
+    margin: 0
+    padding: 0 10px
+
+.big-button
+  height: 50px
+  min-width: 100px
+  font-size: 1rem
